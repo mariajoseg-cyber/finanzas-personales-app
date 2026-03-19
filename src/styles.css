@@ -1,0 +1,198 @@
+:root {
+  --bg: #f3f5f7;
+  --text: #1d2a33;
+  --card: #ffffff;
+  --border: #dce3e9;
+  --primary: #0d9488;
+  --positive: #15803d;
+  --negative: #b91c1c;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app-container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 1rem;
+  display: grid;
+  gap: 1rem;
+}
+
+.card {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 1rem;
+  box-shadow: 0 1px 2px rgba(16, 24, 40, 0.05);
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.main-header h1 {
+  margin: 0;
+}
+
+.month-selector {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-weight: 600;
+}
+
+.month-selector select {
+  min-width: 170px;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.summary-card h3 {
+  margin-top: 0;
+  margin-bottom: 0.4rem;
+}
+
+.summary-card p {
+  margin: 0;
+  font-weight: 700;
+}
+
+.positive {
+  border-left: 6px solid var(--positive);
+}
+
+.negative {
+  border-left: 6px solid var(--negative);
+}
+
+.section-card h2 {
+  margin-top: 0;
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 0.75rem;
+}
+
+.form-grid.two-columns {
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  font-weight: 600;
+}
+
+input,
+select,
+button {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.5rem 0.65rem;
+  font-size: 0.95rem;
+}
+
+.secondary-button {
+  background: #ecfdf5;
+  border-color: #a7f3d0;
+  color: #065f46;
+  margin-bottom: 0.8rem;
+}
+
+.danger-button {
+  background: #fef2f2;
+  border-color: #fecaca;
+  color: #991b1b;
+}
+
+.stack-list {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.row-card {
+  display: grid;
+  grid-template-columns: 1fr 150px 110px;
+  gap: 0.5rem;
+}
+
+.debt-grid {
+  grid-template-columns: 1.2fr repeat(3, 1fr) 110px;
+}
+
+.debt-card {
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 0.75rem;
+}
+
+.progress-wrapper {
+  margin-top: 0.65rem;
+}
+
+.progress-label {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.85rem;
+  margin-bottom: 0.35rem;
+}
+
+.progress-track {
+  height: 10px;
+  background: #e2e8f0;
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, #22c55e, #16a34a);
+}
+
+.result-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+  font-weight: 600;
+}
+
+.highlight-text {
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+.positive-text {
+  color: var(--positive);
+}
+
+.negative-text {
+  color: var(--negative);
+}
+
+@media (max-width: 860px) {
+  .row-card,
+  .debt-grid {
+    grid-template-columns: 1fr;
+  }
+}
